@@ -1,0 +1,14 @@
+[user]
+	name = Busato
+	email = busato@in2p3.fr
+[core]
+	editor = emacs
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+[alias]
+    ci = commit
+    co = checkout
+    l = log --oneline --graph --decorate --all
+    lc = log ORIG_HEAD.. --stat --no-merges
