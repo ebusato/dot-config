@@ -118,6 +118,7 @@ alias sshavirm06='ssh -Y lestand@clravirmpc06.in2p3.fr'
 alias ssh03='ssh -Y busato@clratlserv03.in2p3.fr'
 alias sshccage='ssh -Y busato@ccage.in2p3.fr'
 alias setuproot5='source ~/Travail/root/5.34.32/root/bin/thisroot.sh'
+alias setuproot6='source ~/Travail/root/6.04.02/root/bin/thisroot.sh'
 alias snapshot='gnome-screenshot -a'
 alias rm='rm -i'
 SVNDPGA=svn+ssh://busato@svn.in2p3.fr/dpga
