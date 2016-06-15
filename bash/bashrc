@@ -129,5 +129,7 @@ export GOPATH=$HOME/Travail/gowork
 export PATH=$PATH:$GOPATH/bin
 alias mountpc06='sshfs lestand@clravirmpc06:/home/lestand home-pc06'
 alias unmountpc06='fusermount -u home-pc06'
+alias mountport03='sshfs daq2@clrppseport03:/home/daq2 home-port03'
+alias unmountport03='fusermount -u home-port03'
 alias mountport03tbdata='sshfs daq2@clrppseport03.in2p3.fr:/home/daq2/Travail/gowork/src/gitlab.in2p3.fr/avirm/analysis-go/testbench/data data'
 alias unmountport03tbdata='fusermount -u data'
