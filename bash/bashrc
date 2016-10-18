@@ -114,6 +114,8 @@ if ! shopt -oq posix; then
 fi
 
 # my settings
+alias sshavirmdaq01root='ssh -Y root@clravirmdaq01.in2p3.fr'
+alias sshavirmdaq01busato='ssh -Y busato@clravirmdaq01.in2p3.fr'
 alias sshavirm06='ssh -Y lestand@clravirmpc06.in2p3.fr'
 alias sshppseport03='ssh -Y daq2@clrppseport03.in2p3.fr'
 alias ssh03='ssh -Y busato@clratlserv03.in2p3.fr'
@@ -129,7 +131,11 @@ export GOPATH=$HOME/Travail/gowork
 export PATH=$PATH:$GOPATH/bin
 alias mountpc06='sshfs lestand@clravirmpc06:/home/lestand home-pc06'
 alias unmountpc06='fusermount -u home-pc06'
+alias mountpc01='sshfs daq@clravirmdaq01.in2p3.fr:/home/daq home-daq01'
+alias unmountpc01='fusermount -u home-daq01'
 alias mountport03='sshfs daq2@clrppseport03:/home/daq2 home-port03'
 alias unmountport03='fusermount -u home-port03'
 alias mountport03tbdata='sshfs daq2@clrppseport03.in2p3.fr:/home/daq2/Travail/gowork/src/gitlab.in2p3.fr/avirm/analysis-go/testbench/data data'
 alias unmountport03tbdata='fusermount -u data'
+alias mountccagemi2b='sshfs busato@ccage.in2p3.fr:/sps/hep/gdrmi2b/busato ccagemi2b'
+alias unmountccagemi2b='fusermount -u ccagemi2b'
