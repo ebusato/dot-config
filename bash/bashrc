@@ -114,9 +114,11 @@ if ! shopt -oq posix; then
 fi
 
 # my settings
+alias sshavirmdaq01daq='ssh -Y daq@clravirmdaq01.in2p3.fr'
 alias sshavirmdaq01root='ssh -Y root@clravirmdaq01.in2p3.fr'
 alias sshavirmdaq01busato='ssh -Y busato@clravirmdaq01.in2p3.fr'
 alias sshavirm06='ssh -Y lestand@clravirmpc06.in2p3.fr'
+alias sshport06='ssh -Y daq@clrppseport06.in2p3.fr'
 alias sshppseport03='ssh -Y daq2@clrppseport03.in2p3.fr'
 alias ssh03='ssh -Y busato@clratlserv03.in2p3.fr'
 alias sshccage='ssh -Y busato@ccage.in2p3.fr'
