@@ -131,7 +131,10 @@ alias rm='rm -i'
 SVNDPGA=svn+ssh://busato@svn.in2p3.fr/dpga
 SVNLPC=svn+ssh://ebusato@svn.cern.ch/reps/atlasinst/Institutes/LPC/LPCAT
 
-export GOPATH=$HOME/Travail/gowork
+alias setgopath1='export GOPATH=$HOME/Travail/gowork'
+alias setgopath2='export GOPATH=$HOME/Travail/gowork2'
+
+export GOPATH=$HOME/Travail/gowork2
 export PATH=$PATH:$GOPATH/bin
 
 alias mountpc06='sshfs lestand@clravirmpc06:/home/lestand home-pc06'
@@ -154,3 +157,9 @@ alias unmountccagemi2b='fusermount -u ccagemi2b'
 
 alias mountserverAvirm='sshfs admin@134.158.126.62:/volume1/homes/admin/volume1/DPGA/DataBackup serverAvirm'
 alias unmountserverAvirm='fusermount -u serverAvirm'
+
+alias mountRCT='sshfs daq@clrelecsu8:/datas clrelecsu8'
+alias unmountRCT='fusermount -u clrelecsu8'
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/home/ebusato/anaconda3/bin:$PATH"
