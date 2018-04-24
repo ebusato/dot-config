@@ -141,8 +141,12 @@ export GODEBUG=cgocheck=0
 alias mountpc06='sshfs lestand@clravirmpc06:/home/lestand home-pc06'
 alias unmountpc06='fusermount -u home-pc06'
 
-alias mountport06='sshfs daq@clrppseport06:/home/daq/ home-port06'
-alias unmountport06='fusermount -u home-port06'
+alias mountport06home='sshfs daq@clrppseport06:/home/daq/ port06home'
+alias unmountport06home='fusermount -u port06home'
+
+alias mountport06datas='sshfs daq@clrppseport06:/datas/ port06datas'
+alias unmountport06datas='fusermount -u port06datas'
+alias unmountport06datas2='umount -l port06datas'
 
 alias mountport03='sshfs daq2@clrppseport03:/home/daq2 home-port03'
 alias unmountport03='fusermount -u home-port03'
@@ -156,13 +160,13 @@ alias unmountccagemi2b='fusermount -u ccagemi2b'
 alias mountserverAvirm='sshfs admin@134.158.126.62:/volume1/homes/admin/volume1/DPGA/DataBackup serverAvirm'
 alias unmountserverAvirm='fusermount -u serverAvirm'
 
-alias mountRCTdatas='sshfs daq@clrelecsu8:/datas clrelecsu8datas'
-alias unmountRCTdatas='fusermount -u clrelecsu8datas'
-alias unmountRCT2datas='umount -l clrelecsu8datas'
+alias mountsu8datas='sshfs daq@clrelecsu8:/datas clrelecsu8datas'
+alias unmountsu8datas='fusermount -u clrelecsu8datas'
+alias unmountsu8datas2='umount -l clrelecsu8datas'
 
-alias mountRCThome='sshfs daq@clrelecsu8:. clrelecsu8home'
-alias unmountRCThome='fusermount -u clrelecsu8home'
-alias unmountRCT2home='umount -l clrelecsu8home'
+alias mountsu8home='sshfs daq@clrelecsu8:. clrelecsu8home'
+alias unmountsu8home='fusermount -u clrelecsu8home'
+alias unmountsu8home2='umount -l clrelecsu8home'
 
 alias mountTCA='sshfs daq@clravirmdaq01.in2p3.fr:/datas1 clravirmdaq01'
 alias unmountTCA='fusermount -u clravirmdaq01'
