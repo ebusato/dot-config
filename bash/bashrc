@@ -123,18 +123,17 @@ alias sshport06='ssh -Y daq@clrppseport06.in2p3.fr'
 alias sshppseport03='ssh -Y daq2@clrppseport03.in2p3.fr'
 alias ssh03='ssh -Y busato@clratlserv03.in2p3.fr'
 alias sshccage='ssh -Y busato@ccage.in2p3.fr'
-alias setuproot5='source ~/Travail/root/5.34.32/root/bin/thisroot.sh'
-alias setuproot6='source ~/Travail/root/6.04.02/root/bin/thisroot.sh'
-alias setuproot69='source ~/Travail/root/6.09.02/root/bin/thisroot.sh'
+alias setuproot612='source /home/ebusato/Travail/root/root-6.12.06-binary/root/bin/thisroot.sh'
+alias setuproot534='source /home/ebusato/Travail/root/root-5.34.36/root/bin/thisroot.sh'
 alias snapshot='gnome-screenshot -a'
 alias rm='rm -i'
 SVNDPGA=svn+ssh://busato@svn.in2p3.fr/dpga
 SVNLPC=svn+ssh://ebusato@svn.cern.ch/reps/atlasinst/Institutes/LPC/LPCAT
 
 alias setgopath1='export GOPATH=$HOME/Travail/gowork'
-alias setgopath2='export GOPATH=$HOME/Travail/gowork2'
+alias setgopathVME='export GOPATH=$HOME/Travail/goworkVME; '
 
-export GOPATH=$HOME/Travail/gowork2
+export GOPATH=$HOME/Travail/gowork
 export PATH=$PATH:$GOPATH/bin
 export GODEBUG=cgocheck=0
 
@@ -174,3 +173,8 @@ alias unmountTCA2='umount -l clravirmdaq01'
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/home/ebusato/anaconda3/bin:$PATH"
+
+export PATH="/home/ebusato/Travail/go1.10.2/go/bin/:$PATH"
+
+# added by Anaconda3 installer
+export PATH="/home/ebusato/Downloads/ENTER/bin:$PATH"
