@@ -114,9 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 # my settings
-alias sshavirmdaq01daq='ssh -Y daq@clravirmdaq01.in2p3.fr'
-alias sshavirmdaq01root='ssh -Y root@clravirmdaq01.in2p3.fr'
-alias sshavirmdaq01busato='ssh -Y busato@clravirmdaq01.in2p3.fr'
+alias sshTCA='ssh -Y daq@clravirmdaq01.in2p3.fr'
 alias sshavirm06='ssh -Y lestand@clravirmpc06.in2p3.fr'
 alias sshavirmServer='ssh -Y admin@134.158.126.62'
 alias sshport06='ssh -Y daq@clrppseport06.in2p3.fr'
@@ -167,14 +165,32 @@ alias mountsu8home='sshfs daq@clrelecsu8:. clrelecsu8home'
 alias unmountsu8home='fusermount -u clrelecsu8home'
 alias unmountsu8home2='umount -l clrelecsu8home'
 
-alias mountTCA='sshfs daq@clravirmdaq01.in2p3.fr:/datas1 clravirmdaq01'
+alias mountTCA='sshfs daq@clravirmdaq01.in2p3.fr:/ clravirmdaq01'
 alias unmountTCA='fusermount -u clravirmdaq01'
 alias unmountTCA2='umount -l clravirmdaq01'
 
-# added by Anaconda3 4.4.0 installer
-export PATH="/home/ebusato/anaconda3/bin:$PATH"
-
+alias workTCA='cd $GOPATH/src/gitlab.in2p3.fr/avirm/analysis-go/dpgatca/godaq; mountTCA; go build; echo "godaq -i clravirmdaq01/home/daq/Merge/Write_File_Multi.bin"'
 export PATH="/home/ebusato/Travail/go1.10.2/go/bin/:$PATH"
 
-# added by Anaconda3 installer
-export PATH="/home/ebusato/Downloads/ENTER/bin:$PATH"
+# Romain stuff (pandoc-utils)
+export PANDOC_TEMPLATES=/home/ebusato/Travail/pandoc-utils/templates
+export PANDOC_SCRIPTS=/home/ebusato/Travail/pandoc-utils/scripts
+export PANDOC_FILTERS=/home/ebusato/Travail/pandoc-utils/filters
+export PATH=$PATH:${PANDOC_SCRIPTS}
+
+# added by Anaconda3 5.3.0 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/ebusato/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/ebusato/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ebusato/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/ebusato/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
